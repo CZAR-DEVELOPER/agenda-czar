@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Agenda — Cesar</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 720px; margin: 60px auto; padding: 0 24px; color: #18181b; line-height: 1.6; }
+  h1 { font-size: 32px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 8px; }
+  p.lede { color: #52525b; margin-bottom: 32px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e4e4e7; }
+  th { font-weight: 500; color: #71717a; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  code { font-family: ui-monospace, monospace; font-size: 12px; background: #f4f4f5; padding: 2px 6px; border-radius: 3px; }
+  a { color: #1e6fff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 8px; vertical-align: middle; }
+  .dot-trabajo { background: #1e6fff; } .dot-freelance { background: #ff9500; }
+  .dot-uam { background: #ff3b30; } .dot-escuela { background: #8b1a1a; }
+  .dot-alimentacion { background: #34c759; } .dot-hogar { background: #af52de; }
+  .dot-familia { background: #ff2d92; } .dot-lectura { background: #a2845e; }
+  .dot-educacion { background: #5856d6; } .dot-crecimiento { background: #8b9a3a; }
+  .note { background: #fef3c7; border-left: 3px solid #f59e0b; padding: 14px 18px; margin: 24px 0; font-size: 14px; border-radius: 2px; }
+  .note strong { display: block; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+  <h1>Agenda — Cesar</h1>
+  <p class="lede">Calendarios suscribibles para Apple Calendar / iCloud.</p>
+
+  <div class="note">
+    <strong>Cómo suscribirse</strong>
+    Copia la URL de cada archivo .ics (botón derecho → copiar dirección del enlace) y en Apple Calendar: <em>Archivo → Nueva suscripción de calendario</em> → pega la URL. Marca "Actualizar automáticamente: cada hora".
+  </div>
+
+  <table>
+    <thead><tr><th>Calendario</th><th>Archivo</th><th></th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="dot dot-trabajo"></span>Aeroméxico</td>
+        <td><code>agenda-trabajo.ics</code></td>
+        <td><a href="agenda-trabajo.ics" download>descargar</a></td>
+      </tr>
+      <tr>
+        <td><span class="dot dot-freelance"></span>Freelance</td>
+        <td><code>agenda-freelance.ics</code></td>
+        <td><a href="agenda-freelance.ics" download>descargar</a></td>
+      </tr>
+      <tr>
+        <td><span class="dot dot-uam"></span>UAM</td>
+        <td><code>agenda-uam.ics</code></td>
+        <td><a href="agenda-uam.ics" download>descargar</a></td>
+      </tr>
+      <tr>
+        <td><span class="dot dot-escuela"></span>UAM · Escuela</td>
+        <td><code>agenda-escuela.ics</code></td>
+        <td><a href="agenda-escuela.ics" download>descargar</a></td>
+      </tr>
+      <tr>
+        <td><span class="dot dot-alimentacion"></span>Alimentación</td>
+        <td><code>agenda-alimentacion.ics</code></td>
+        <td><a href="agenda-alimentacion.ics" download>descargar</a></td>
+      </tr>
+      <tr>
+        <td><span class="dot dot-hogar"></span>Hogar</td>
+        <td><code>agenda-hogar.ics</code></td>
+        <td><a href="agenda-hogar.ics" download>descargar</a></td>
+      </tr>
+      <tr>
+        <td><span class="dot dot-familia"></span>Familia</td>
+        <td><code>agenda-familia.ics</code></td>
+        <td><a href="agenda-familia.ics" download>descargar</a></td>
+      </tr>
+      <tr>
+        <td><span class="dot dot-lectura"></span>Lectura</td>
+        <td><code>agenda-lectura.ics</code></td>
+        <td><a href="agenda-lectura.ics" download>descargar</a></td>
+      </tr>
+      <tr>
+        <td><span class="dot dot-educacion"></span>Educación</td>
+        <td><code>agenda-educacion.ics</code></td>
+        <td><a href="agenda-educacion.ics" download>descargar</a></td>
+      </tr>
+      <tr>
+        <td><span class="dot dot-crecimiento"></span>Crecimiento personal</td>
+        <td><code>agenda-crecimiento.ics</code></td>
+        <td><a href="agenda-crecimiento.ics" download>descargar</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top:48px; color:#a1a1aa; font-size:12px;">Generado desde la agenda interactiva. Para actualizar: regenera los .ics, reemplaza los archivos en el repo y haz git push. Apple Calendar consultará los cambios automáticamente.</p>
+</body>
+</html>
