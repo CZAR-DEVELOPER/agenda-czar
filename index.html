@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <title>Agenda — Cesar</title>
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 720px; margin: 60px auto; padding: 0 24px; color: #18181b; line-height: 1.6; }
+  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 820px; margin: 60px auto; padding: 0 24px; color: #18181b; line-height: 1.6; }
   h1 { font-size: 32px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 8px; }
-  p.lede { color: #52525b; margin-bottom: 32px; }
+  p.lede { color: #52525b; margin-bottom: 8px; }
+  .meta { font-family: ui-monospace, monospace; font-size: 11px; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 32px; }
   table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px; }
-  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e4e4e7; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e4e4e7; vertical-align: middle; }
   th { font-weight: 500; color: #71717a; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
   code { font-family: ui-monospace, monospace; font-size: 12px; background: #f4f4f5; padding: 2px 6px; border-radius: 3px; }
   a { color: #1e6fff; text-decoration: none; }
@@ -21,73 +22,240 @@
   .dot-educacion { background: #5856d6; } .dot-crecimiento { background: #8b9a3a; }
   .note { background: #fef3c7; border-left: 3px solid #f59e0b; padding: 14px 18px; margin: 24px 0; font-size: 14px; border-radius: 2px; }
   .note strong { display: block; margin-bottom: 4px; }
+  .copy-btn {
+    background: #ffffff;
+    border: 1px solid #e4e4e7;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    color: #52525b;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+  }
+  .copy-btn:hover { background: #f4f4f5; color: #18181b; border-color: #a1a1aa; }
+  .copy-btn.copied { background: #18181b; color: #ffffff; border-color: #18181b; }
+  .copy-btn.copied span::after { content: ' ✓'; }
+  .url-cell { width: 1%; }
+  .copy-all {
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #18181b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-family: inherit;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .copy-all:hover { background: #3f3f46; }
+  .copy-all.copied::after { content: ' ✓ copiado'; }
 </style>
 </head>
 <body>
   <h1>Agenda — Cesar</h1>
   <p class="lede">Calendarios suscribibles para Apple Calendar / iCloud.</p>
+  <p class="meta">Generado · lunes, 27 de abril de 2026, 06:16 p.m.</p>
 
   <div class="note">
     <strong>Cómo suscribirse</strong>
-    Copia la URL de cada archivo .ics (botón derecho → copiar dirección del enlace) y en Apple Calendar: <em>Archivo → Nueva suscripción de calendario</em> → pega la URL. Marca "Actualizar automáticamente: cada hora".
+    Click en "Copiar URL" del calendario que quieras → en Apple Calendar: <em>Archivo → Nueva suscripción de calendario</em> → pega la URL → marca "Actualizar automáticamente: cada hora".
   </div>
 
   <table>
-    <thead><tr><th>Calendario</th><th>Archivo</th><th></th></tr></thead>
+    <thead><tr><th>Calendario</th><th>Archivo</th><th>URL</th><th></th></tr></thead>
     <tbody>
       <tr>
         <td><span class="dot dot-trabajo"></span>Aeroméxico</td>
         <td><code>agenda-trabajo.ics</code></td>
+        <td class="url-cell">
+          <button class="copy-btn" data-url="https://czar-developer.github.io/agenda-czar/agenda-trabajo.ics" title="Copiar URL">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+              <path d="M3 12V3a1 1 0 011-1h7"/>
+            </svg>
+            <span>Copiar URL</span>
+          </button>
+        </td>
         <td><a href="agenda-trabajo.ics" download>descargar</a></td>
       </tr>
       <tr>
         <td><span class="dot dot-freelance"></span>Freelance</td>
         <td><code>agenda-freelance.ics</code></td>
+        <td class="url-cell">
+          <button class="copy-btn" data-url="https://czar-developer.github.io/agenda-czar/agenda-freelance.ics" title="Copiar URL">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+              <path d="M3 12V3a1 1 0 011-1h7"/>
+            </svg>
+            <span>Copiar URL</span>
+          </button>
+        </td>
         <td><a href="agenda-freelance.ics" download>descargar</a></td>
       </tr>
       <tr>
         <td><span class="dot dot-uam"></span>UAM</td>
         <td><code>agenda-uam.ics</code></td>
+        <td class="url-cell">
+          <button class="copy-btn" data-url="https://czar-developer.github.io/agenda-czar/agenda-uam.ics" title="Copiar URL">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+              <path d="M3 12V3a1 1 0 011-1h7"/>
+            </svg>
+            <span>Copiar URL</span>
+          </button>
+        </td>
         <td><a href="agenda-uam.ics" download>descargar</a></td>
       </tr>
       <tr>
         <td><span class="dot dot-escuela"></span>UAM · Escuela</td>
         <td><code>agenda-escuela.ics</code></td>
+        <td class="url-cell">
+          <button class="copy-btn" data-url="https://czar-developer.github.io/agenda-czar/agenda-escuela.ics" title="Copiar URL">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+              <path d="M3 12V3a1 1 0 011-1h7"/>
+            </svg>
+            <span>Copiar URL</span>
+          </button>
+        </td>
         <td><a href="agenda-escuela.ics" download>descargar</a></td>
       </tr>
       <tr>
         <td><span class="dot dot-alimentacion"></span>Alimentación</td>
         <td><code>agenda-alimentacion.ics</code></td>
+        <td class="url-cell">
+          <button class="copy-btn" data-url="https://czar-developer.github.io/agenda-czar/agenda-alimentacion.ics" title="Copiar URL">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+              <path d="M3 12V3a1 1 0 011-1h7"/>
+            </svg>
+            <span>Copiar URL</span>
+          </button>
+        </td>
         <td><a href="agenda-alimentacion.ics" download>descargar</a></td>
       </tr>
       <tr>
         <td><span class="dot dot-hogar"></span>Hogar</td>
         <td><code>agenda-hogar.ics</code></td>
+        <td class="url-cell">
+          <button class="copy-btn" data-url="https://czar-developer.github.io/agenda-czar/agenda-hogar.ics" title="Copiar URL">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+              <path d="M3 12V3a1 1 0 011-1h7"/>
+            </svg>
+            <span>Copiar URL</span>
+          </button>
+        </td>
         <td><a href="agenda-hogar.ics" download>descargar</a></td>
       </tr>
       <tr>
         <td><span class="dot dot-familia"></span>Familia</td>
         <td><code>agenda-familia.ics</code></td>
+        <td class="url-cell">
+          <button class="copy-btn" data-url="https://czar-developer.github.io/agenda-czar/agenda-familia.ics" title="Copiar URL">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+              <path d="M3 12V3a1 1 0 011-1h7"/>
+            </svg>
+            <span>Copiar URL</span>
+          </button>
+        </td>
         <td><a href="agenda-familia.ics" download>descargar</a></td>
       </tr>
       <tr>
         <td><span class="dot dot-lectura"></span>Lectura</td>
         <td><code>agenda-lectura.ics</code></td>
+        <td class="url-cell">
+          <button class="copy-btn" data-url="https://czar-developer.github.io/agenda-czar/agenda-lectura.ics" title="Copiar URL">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+              <path d="M3 12V3a1 1 0 011-1h7"/>
+            </svg>
+            <span>Copiar URL</span>
+          </button>
+        </td>
         <td><a href="agenda-lectura.ics" download>descargar</a></td>
       </tr>
       <tr>
         <td><span class="dot dot-educacion"></span>Educación</td>
         <td><code>agenda-educacion.ics</code></td>
+        <td class="url-cell">
+          <button class="copy-btn" data-url="https://czar-developer.github.io/agenda-czar/agenda-educacion.ics" title="Copiar URL">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+              <path d="M3 12V3a1 1 0 011-1h7"/>
+            </svg>
+            <span>Copiar URL</span>
+          </button>
+        </td>
         <td><a href="agenda-educacion.ics" download>descargar</a></td>
       </tr>
       <tr>
         <td><span class="dot dot-crecimiento"></span>Crecimiento personal</td>
         <td><code>agenda-crecimiento.ics</code></td>
+        <td class="url-cell">
+          <button class="copy-btn" data-url="https://czar-developer.github.io/agenda-czar/agenda-crecimiento.ics" title="Copiar URL">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+              <path d="M3 12V3a1 1 0 011-1h7"/>
+            </svg>
+            <span>Copiar URL</span>
+          </button>
+        </td>
         <td><a href="agenda-crecimiento.ics" download>descargar</a></td>
       </tr>
     </tbody>
   </table>
 
-  <p style="margin-top:48px; color:#a1a1aa; font-size:12px;">Generado desde la agenda interactiva. Para actualizar: regenera los .ics, reemplaza los archivos en el repo y haz git push. Apple Calendar consultará los cambios automáticamente.</p>
+  <button class="copy-all" id="copyAll">
+    <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="4" y="4" width="9" height="10" rx="1.5"/>
+      <path d="M3 12V3a1 1 0 011-1h7"/>
+    </svg>
+    Copiar todas las URLs
+  </button>
+
+  <p style="margin-top:48px; color:#a1a1aa; font-size:12px;">Para actualizar la agenda: regenera los .ics, reemplaza los archivos en el repo y haz git push. Apple Calendar consultará los cambios automáticamente.</p>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.url);
+        btn.classList.add('copied');
+        const span = btn.querySelector('span');
+        const original = span.textContent;
+        span.textContent = 'Copiado';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          span.textContent = original;
+        }, 1800);
+      } catch (e) {
+        alert('No se pudo copiar: ' + btn.dataset.url);
+      }
+    });
+  });
+
+  document.getElementById('copyAll').addEventListener('click', async () => {
+    const urls = [...document.querySelectorAll('.copy-btn')].map(b => b.dataset.url).join('\n');
+    try {
+      await navigator.clipboard.writeText(urls);
+      const btn = document.getElementById('copyAll');
+      btn.classList.add('copied');
+      setTimeout(() => btn.classList.remove('copied'), 2000);
+    } catch (e) {
+      alert('No se pudo copiar');
+    }
+  });
+</script>
 </body>
 </html>

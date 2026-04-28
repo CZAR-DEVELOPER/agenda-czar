@@ -7,7 +7,7 @@ X-WR-CALNAME:Crecimiento personal
 X-WR-CALDESC:Agenda semanal — Crecimiento personal
 X-WR-TIMEZONE:America/Mexico_City
 BEGIN:VEVENT
-UID:crecimiento-1-1777324992266@cesar-agenda
+UID:crecimiento-1-1777335388839@cesar-agenda
 DTSTAMP:20260427T000000
 DTSTART;TZID=America/Mexico_City:20260503T100000
 DTEND;TZID=America/Mexico_City:20260503T110000
@@ -21,7 +21,7 @@ TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:crecimiento-2-1777324992266@cesar-agenda
+UID:crecimiento-2-1777335388839@cesar-agenda
 DTSTAMP:20260427T000000
 DTSTART;TZID=America/Mexico_City:20260503T200000
 DTEND;TZID=America/Mexico_City:20260503T210000
